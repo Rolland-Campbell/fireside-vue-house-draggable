@@ -9,11 +9,17 @@ export default new Vuex.Store({
     rooms: [
       { id: 1, name: "Bedroom", items: [] },
       { id: 2, name: "Living Room", items: [] },
-      { id: 3, name: "Kitchen", items: [] }
+      { id: 3, name: "Kitchen", items: [] },
+      { id: 4, name: "Bathroom", items: [] }
+
     ],
     items: [
-      { id: 1, name: "fan", url: "../assets/fan.png" },
-      { id: 2, name: "tv", url: "../assets/tv.png" }
+      { id: 1, name: "bed", url: "fas fa-bed" },
+      { id: 2, name: "tv", url: "fas fa-tv" },
+      { id: 3, name: "couch", url: "fas fa-couch" },
+      { id: 4, name: "toilet", url: "fas fa-toilet" },
+      { id: 5, name: "fan", url: "fas fa-fan" },
+
     ]
   },
   mutations: {

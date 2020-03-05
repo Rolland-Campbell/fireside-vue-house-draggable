@@ -6,7 +6,9 @@
     ondragover="event.preventDefault()"
   >
     {{roomData.name}}
-    <items v-for="item in roomData.items" :itemData="item" :key="item.id" :roomId="roomData.id" />
+    <div class="roomItems">
+      <items v-for="item in roomData.items" :itemData="item" :key="item.id" :roomId="roomData.id" />
+    </div>
   </div>
 </template>
 
@@ -53,5 +55,10 @@ export default {
   border: 1px;
   border-style: solid;
   border-color: black;
+}
+
+.roomItems {
+  display: flex;
+  justify-content: space-evenly;
 }
 </style>

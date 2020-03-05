@@ -1,7 +1,7 @@
 <template>
   <div class="movingTruck col-10 offset-1 mb-4">
     <p class="mb-2">Moving Truck</p>
-    <p>
+    <p class="truckItems">
       <items v-for="item in items" :key="item.id" :itemData="item" />
     </p>
   </div>
@@ -35,5 +35,10 @@ export default {
   border-color: black;
   border-style: solid;
   background-color: white;
+}
+
+.truckItems {
+  display: flex;
+  justify-content: space-evenly;
 }
 </style>

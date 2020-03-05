@@ -1,6 +1,6 @@
 <template>
   <div class="item" draggable="true" v-on:dragstart.capture="moving" v-on:dragend="dropped">
-    <img src alt="Opps" />
+    <i :class="itemData.url"></i>
   </div>
 </template>
 
@@ -35,9 +35,8 @@ export default {
 
 
 <style scoped>
-img {
-  height: 5vh;
-  widows: 5vw;
+i {
+  font-size: 5vh;
   background-color: white;
   border: 1px;
   border-style: solid;
