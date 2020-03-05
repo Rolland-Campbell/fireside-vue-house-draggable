@@ -6,7 +6,7 @@
     ondragover="event.preventDefault()"
   >
     {{roomData.name}}
-    <div class="roomItems">
+    <div class="roomItems mt-3">
       <items v-for="item in roomData.items" :itemData="item" :key="item.id" :roomId="roomData.id" />
     </div>
   </div>
