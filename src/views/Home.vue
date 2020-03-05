@@ -1,26 +1,32 @@
 <template>
   <div class="home container-fluid p-5">
+    <div class="row">
+      <movingTruck />
+    </div>
     <div class="row rowTop">
-      <livingRoom />
-      <kitchen />
+      <rooms v-for="room in rooms" :roomData="room" :key="room._id" />
     </div>
   </div>
 </template>
 
 
 <script>
-import LivingRoom from "../components/LivingRoom";
-import Kitchen from "../components/Kitchen";
+import MovingTruck from "../components/MovingTruck";
+import Rooms from "../components/Room";
 export default {
   name: "Home",
   data() {
     return {};
   },
-  computed: {},
+  computed: {
+    rooms() {
+      return this.$store.state.rooms;
+    }
+  },
   methods: {},
   components: {
-    LivingRoom,
-    Kitchen
+    Rooms,
+    MovingTruck
   }
 };
 </script>
